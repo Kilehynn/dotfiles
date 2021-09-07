@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Run this script to install everything needed for the plugins in my zshrc
+
 distrib=$(sudo cat /etc/os-release | sed -n 's/^ID=\(.*\)$/\1/p')
 echo $distrib
 
