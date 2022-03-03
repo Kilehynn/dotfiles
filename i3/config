@@ -82,18 +82,20 @@ bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle # mute M
 bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause" 
 bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next" 
 bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
-
 # brightness control
-bindsym XF86MonBrightnessDown exec /home/quentin/Apps/scripts/set-brightness -
-bindsym XF86MonBrightnessUp exec /home/quentin/Apps/scripts/set-brightness +
+#bindsym XF86MonBrightnessDown exec /home/quentin/Apps/scripts/set-brightness -
+#bindsym XF86MonBrightnessUp exec /home/quentin/Apps/scripts/set-brightness +
 
-
+# Screen brightness controls
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
 #
 #
 # Moving workspaces between screens 
 bindsym $mod+p move workspace to output right
 bindsym $mod+o move workspace to output left
 bindsym $mod+m move workspace to output up
+bindsym $mod+n move workspace to output down
 
 
 # change focus
