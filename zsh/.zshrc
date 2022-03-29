@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$PATH:/usr/bin/:
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/kilehynn/.oh-my-zsh"
@@ -84,7 +84,7 @@ ZSH_COLORIZE_TOOL=pygmentize
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH_CUSTOM/aliases.zsh
-
+source ~/keyboard_layout.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -115,3 +115,5 @@ source $ZSH_CUSTOM/aliases.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export PGDATA="$HOME/postgres_data"
+export PGHOST="/tmp"
