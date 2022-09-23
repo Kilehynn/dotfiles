@@ -7,7 +7,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$PATH:/usr/bin/:
-
+export PATH=$PATH:~/.local/share/gem/ruby/3.0.0/bin:~/.emacs.d/bin
 # Path to your oh-my-zsh installation.
 export ZSH="/home/kilehynn/.oh-my-zsh"
 
@@ -78,7 +78,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git sudo man common-aliases colorize alias-finder colored-man-pages 
-	 zsh-autosuggestions command-not-found )
+	 zsh-autosuggestions command-not-found poetry)
 
 ZSH_COLORIZE_TOOL=pygmentize
 
@@ -117,3 +117,10 @@ source ~/keyboard_layout.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PGDATA="$HOME/postgres_data"
 export PGHOST="/tmp"
+
+export PNPM_HOME="/home/kilehynn/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
